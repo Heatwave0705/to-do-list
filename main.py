@@ -21,12 +21,13 @@ def mark_down():
     tasks[input("Which task would you like to mark as complete? ").lower().capitalize()] = "Complete"
 
 def delete_complete_tasks():
-    for task, status in tasks.items():
-        if status == "Complete":
+    for task in list(tasks.keys()):
+        if tasks[task] == "Complete":
             tasks.pop(task)
 
 def print_tasks():
-    print(tasks)
+    print("\n")
+    print (tasks)
 
 def starting_prompt():
     match main_menu():
@@ -57,3 +58,6 @@ def ending_prompt():
 def main():
     starting_prompt()
     ending_prompt()
+
+if __name__ == "__main__":
+    main()

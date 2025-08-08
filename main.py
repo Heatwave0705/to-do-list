@@ -9,7 +9,7 @@ def main_menu():
         "4. Delete all complete tasks\n"
         "5. See all tasks\n"
         "6. Exit program\n"
-        "Enter your choice (number 1-5): "
+        "Enter your choice (number 1-6): "
     )
 
     return choice
@@ -26,7 +26,7 @@ def delete_complete_tasks():
     for task in list(tasks.keys()):
         if tasks[task] == "Complete":
             tasks.pop(task)
-
+print("Blue")
 def print_tasks():
     print("\n")
     print (tasks)
